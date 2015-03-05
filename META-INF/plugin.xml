@@ -1,7 +1,7 @@
-<idea-plugin version="2">
+<idea-plugin version="4">
   <id>com.ftinc.plugin.generator.sectionblock</id>
   <name>Section Block Comment Generator</name>
-  <version>1.0</version>
+  <version>1.0.0</version>
   <vendor email="support@52inc.com"
           url="http://52inc.com">52inc</vendor>
 
@@ -15,11 +15,11 @@
   </change-notes>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="131"/>
+  <idea-version since-build="123.72"/>
 
   <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
        on how to target different products -->
-  <depends>com.intellij.modules.java</depends>
+  <!--<depends>com.intellij.modules.java</depends>-->
 
   <extensions defaultExtensionNs="com.intellij">
     <!-- Add your extensions here -->
@@ -35,10 +35,10 @@
 
   <actions>
     <!-- Add your actions here -->
-      <action id="BlockSectionComment.generate"
+      <action id="BlockSectionCommentGenerate"
               class="com.ftinc.plugin.generator.sectionblock.GenerateSectionBlockComment"
               text="Generate Block Section Comment" description="${project.description}">
-          <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup2"/>
+          <add-to-group group-id="GenerateGroup" anchor="last"/>
       </action>
   </actions>
 

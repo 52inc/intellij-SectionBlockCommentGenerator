@@ -20,14 +20,14 @@ public class GenerateSectionBlockComment extends AnAction {
             "     *\n" +
             "     * SECTION\n" +
             "     *\n" +
-            "     */";
+            "     */\n\t";
 
     @Override
     public void actionPerformed(AnActionEvent e) {
 
         // Get the offset in the current editor
         DataContext dataContext = e.getDataContext();
-        Editor editor = PlatformDataKeys.EDITOR.getData(dataContext);
+        final Editor editor = PlatformDataKeys.EDITOR.getData(dataContext);
         final Document document = editor.getDocument();
         final int offset = editor.getCaretModel().getOffset();
 
@@ -36,6 +36,7 @@ public class GenerateSectionBlockComment extends AnAction {
             @Override
             protected void run(Result result) throws Throwable {
                 document.insertString(offset, SECTION_COMMENT);
+                editor.getCaretModel().moveToOffset(offset + SECTION_COMMENT.length());
             }
         }.execute();
 
