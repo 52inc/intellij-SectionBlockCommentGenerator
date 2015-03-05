@@ -12,3 +12,10 @@ Just press `Cmd + N` on Mac or `Alt + Insert` on Windows to bring up the `Genera
      */
      
 At your current cursor position
+
+## Installation
+
+Download the Jar file from Here:
+[BlockCommentGeneratorPlugin.jar](https://github.com/52inc/intellij-SectionBlockCommentGenerator/releases/download/v1.0.0/BlockCommentGeneratorPlugin-v1.0.0.jar)
+
+Then in **IntelliJ IDEA** or **Android Studio** preferences, go to **Plugins**, then click **Install Plugin from Disk...**, and select the downloaded jar file, then reboot.
